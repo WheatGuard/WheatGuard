@@ -2,13 +2,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 import torch
+torch.set_num_threads(1)
 import torch.nn as nn
 from torchvision import transforms
 from PIL import Image
 
 from timm import create_model
-
-torch.set_num_threads(1)
 
 app = Flask(__name__)
 CORS(app)
