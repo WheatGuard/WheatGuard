@@ -8,6 +8,8 @@ from PIL import Image
 
 from timm import create_model
 
+torch.set_num_threads(1)
+
 app = Flask(__name__)
 CORS(app)
 
